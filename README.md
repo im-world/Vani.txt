@@ -6,6 +6,8 @@
 
 **vani.txt** is a standalone, completely offline Windows desktop application that transcribes audio files to text using OpenAI's powerful Whisper models locally on your machine. It is designed to be completely private, meaning your audio files never leave your computer, and is accessible to anyone without requiring Python, command-line knowledge, or complex configurations.
 
+![vani.txt screenshot](vani_screenshot.png)
+
 ## ✨ Features
 - **Plug and Play:** Download a single `.exe` file and double-click to run. No dependencies needed!
 - **100% Private & Offline:** Everything runs locally on your machine.
@@ -34,9 +36,6 @@ Since **vani.txt** bundles all requirements (including Python, PyTorch, FFmpeg, 
 3. **Select Audio:** Click **"Select Audio File"** and choose your `.mp3`, `.wav`, `.m4a`, or video file.
 4. **Transcribe:** Click **"Transcribe"**. A progress bar will appear, and you will see the text streaming live into the editor.
 5. **Edit & Save:** Once finished, you can manually fix any typos right inside the text editor screen, then click **"Save as .txt"** to export your final transcript!
-
-> **Demo Video:**  
-> *(Insert GIF or YouTube link demonstrating the workflow here)*
 
 ---
 
