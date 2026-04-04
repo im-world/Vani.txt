@@ -31,7 +31,11 @@ class StreamInterceptor:
         self.buffer = ""
 
     def write(self, text):
-        self.original_stdout.write(text)  # Keep original output for terminal
+        if self.original_stdout:
+            try:
+                self.original_stdout.write(text)  # Keep original output for terminal
+            except AttributeError:
+                pass
         self.buffer += text
         if '\n' in self.buffer:
             lines = self.buffer.split('\n')
@@ -58,7 +62,11 @@ class StreamInterceptor:
                 self.text_signal.emit(segment_text.strip() + " ")
 
     def flush(self):
-        self.original_stdout.flush()
+        if self.original_stdout:
+            try:
+                self.original_stdout.flush()
+            except AttributeError:
+                pass
 
 class TranscriptionThread(QThread):
     finished = Signal(str)
